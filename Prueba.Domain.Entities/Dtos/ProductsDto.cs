@@ -1,0 +1,14 @@
+﻿namespace Prueba.Domain.Entities.Dtos
+{
+    public class ProductsDto
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+        public decimal Price { get; set; }
+        public int CategoryId { get; set; }
+        public int StatusId { get; set; }
+        public string Category { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
+    }
+}

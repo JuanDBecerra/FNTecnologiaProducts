@@ -1,0 +1,6 @@
+@Prueba.Adapters.APIProductos_HostAddress = http://localhost:5244
+
+GET {{Prueba.Adapters.APIProductos_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
