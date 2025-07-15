@@ -8,6 +8,15 @@ namespace Prueba.Application.Services
     {
         public ProductsService(IRepository<Products> repository, IMediatorService mediator) : base(repository, mediator) { }
 
+
+        public Products? GetByProductsId(int id)
+        {
+            return Get()
+                .Include(s => s.Status)
+                .Include(c => c.Category)
+                .FirstOrDefault(s => s.Pro_Id == id);
+        }
+
         public List<Products> GetAllData()
         {
             return Get()

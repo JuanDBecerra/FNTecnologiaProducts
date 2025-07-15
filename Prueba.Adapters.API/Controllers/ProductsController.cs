@@ -27,7 +27,7 @@ namespace Prueba.Adapters.API.Controllers
         {
             try
             {
-                var result = _productsService.GetById(id) ?? throw new Exception("No existe producto con ese id");
+                var result = _productsService.GetByProductsId(id) ?? throw new Exception("No existe producto con ese id");
                 return StatusCode(StatusCodes.Status200OK, _mapper.Map<ProductsDto>(result));
             }
             catch (Exception ex)
